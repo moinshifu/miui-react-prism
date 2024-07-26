@@ -20,9 +20,10 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
 import PieChartCircle from "./PieChart";
-import Deposits from "./Deposits";
+
 import Orders from "./Orders";
-import { AppHeader, ReactButton } from "../Components";
+import { AppHeader, ReactButton, MiniCard, ReactTypo } from "../Components";
+import { miniCardData, lightText } from "../Utilites/Const";
 
 function Copyright(props) {
   return (
@@ -152,10 +153,31 @@ export default function Dashboard() {
         >
           <Toolbar />
           <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
-            <ReactButton text={"Download Report"} sx={{ float: "right" }} />
             <Grid container spacing={3}>
-              {/* Chart */}
-              <Grid item xs={12} md={8}>
+              <Grid item md={6}>
+                <ReactTypo
+                  MainHeading="Hi Moin"
+                  SubTitle={"This is your Dashboard Overview."}
+                />
+              </Grid>
+              <Grid item md={6}>
+                <ReactButton text={"Download Report"} sx={{ float: "right" }} />
+              </Grid>
+
+              {miniCardData.map((minicard) => {
+                return (
+                  <Grid item xs={12} md={4} lg={3}>
+                    <MiniCard
+                      score={minicard.score}
+                      info={minicard.info}
+                      icon={minicard.icon}
+                      profit={minicard.profit}
+                    />
+                  </Grid>
+                );
+              })}
+
+              <Grid item xs={12} md={12}>
                 <Paper
                   sx={{
                     p: 2,
@@ -171,18 +193,7 @@ export default function Dashboard() {
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 350,
-                  }}
-                >
-                  <Deposits />
-                </Paper>
-              </Grid>
+
               <Grid item xs={12} md={8}>
                 <Paper
                   sx={{

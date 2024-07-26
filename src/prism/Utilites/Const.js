@@ -1,8 +1,17 @@
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import CheckIcon from "@mui/icons-material/Check";
+import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
+import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
+
 export const primaryText = "#202020";
+export const lightText = "#aaa8ae";
 export const primary = "#1f7bf4";
 export const primary2 = "#00aaff";
 export const success = "#0aa630";
 export const orange = "#ffa043";
+export const alert = "#fc0000";
+export const cardShadow =
+  "rgba(17, 17, 26, 0.05) 0px 1px 1px,rgba(17, 17, 26, 0.1) 0px 0px 2px";
 
 export const drawerWidth = 240;
 export const dataset = [
@@ -77,5 +86,32 @@ export const dataset = [
     paris: 70,
     newYork: 103,
     month: "Dec",
+  },
+];
+
+export const miniCardData = [
+  {
+    score: "13,596",
+    info: "Last Month Revenue",
+    icon: <AttachMoneyIcon />,
+    profit: +1.2,
+  },
+  {
+    score: "+16",
+    info: "Project Accepted",
+    icon: <CheckIcon />,
+    profit: -2.4,
+  },
+  {
+    score: "92.8%",
+    info: "Delivered On Time",
+    icon: <TwoWheelerIcon />,
+    profit: +1.2,
+  },
+  {
+    score: "1h 14m",
+    info: "Responsed On Time",
+    icon: <TimerOutlinedIcon />,
+    profit: -0.8,
   },
 ];

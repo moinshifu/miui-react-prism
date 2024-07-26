@@ -1,4 +1,5 @@
 import AppHeader from "./AppHeader/AppHeader";
-import ReactButton from "./Button/Button";
-
-export { AppHeader, ReactButton };
+import ReactButton from "./ReactButton/ReactButton";
+import MiniCard from "./MiniCard/MiniCard";
+import ReactTypo from "./ReactTypo/ReactTypo";
+export { AppHeader, ReactButton, MiniCard, ReactTypo };
