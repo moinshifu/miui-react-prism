@@ -22,8 +22,16 @@ import Chart from "./Chart";
 import PieChartCircle from "./PieChart";
 
 import Orders from "./Orders";
-import { AppHeader, ReactButton, MiniCard, ReactTypo } from "../Components";
+import {
+  AppHeader,
+  ReactButton,
+  MiniCard,
+  ReactTypo,
+  ReactPaper,
+  ReactTable,
+} from "../Components";
 import { miniCardData, lightText } from "../Utilites/Const";
+import ReactLink from "../Components/ReactButton/ReactLink";
 
 function Copyright(props) {
   return (
@@ -34,9 +42,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
+      <Link href="https://mui.com/">Your Website</Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -157,7 +163,7 @@ export default function Dashboard() {
               <Grid item md={6}>
                 <ReactTypo
                   MainHeading="Hi Moin"
-                  SubTitle={"This is your Dashboard Overview."}
+                  SubTitle2={"This is your Dashboard Overview."}
                 />
               </Grid>
               <Grid item md={6}>
@@ -177,20 +183,18 @@ export default function Dashboard() {
                 );
               })}
 
-              <Grid item xs={12} md={12}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                  }}
-                >
-                  <Typography variant="h6" align="left">
-                    <b> Task Progres</b>
-                  </Typography>
+              <Grid item md={12} lg={6}>
+                <ReactPaper Title={"Task Progress"}>
                   <Chart />
-                </Paper>
+                </ReactPaper>
+              </Grid>
+              <Grid item md={12} lg={6}>
+                <ReactPaper
+                  Title={"Active Projects"}
+                  Action={<ReactLink text={"See All"} />}
+                >
+                  <ReactTable />
+                </ReactPaper>
               </Grid>
               {/* Recent Deposits */}
 

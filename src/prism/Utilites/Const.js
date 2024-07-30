@@ -115,3 +115,38 @@ export const miniCardData = [
     profit: -0.8,
   },
 ];
+
+export const projectData = [
+  {
+    icon: "ST",
+    color: "#1e88e5",
+    name: "Square Template",
+    members: 2,
+    tasks: 24,
+    days: 8,
+  },
+  {
+    icon: "MI",
+    color: "#43a047",
+    name: "Masendro Illustration",
+    members: 3,
+    tasks: 14,
+    days: 8,
+  },
+  {
+    icon: "SS",
+    color: "#26c6da",
+    name: "Sebo Studio Website",
+    members: 1,
+    tasks: 2,
+    days: 8,
+  },
+  {
+    icon: "MI2",
+    color: "#ff9800",
+    name: "Masendro Illustration",
+    members: 3,
+    tasks: 14,
+    days: 8,
+  },
+];

@@ -5,12 +5,6 @@ import { dataset, primary, orange, success } from "../Utilites/Const";
 
 const chartSetting = {
   borderRadius: 50,
-  yAxis: [
-    // {
-    //   label: "rainfall (mm)",
-    // },
-  ],
-
   sx: {
     [`.${axisClasses.left} .${axisClasses.label}`]: {
       transform: "translate(-20px, 0)",
@@ -20,10 +14,12 @@ const chartSetting = {
 
 const valueFormatter = (value) => `${value}mm`;
 
-export default function BarsDataset() {
+export default function BarsDataset({ width, height = 320 }) {
   return (
     <BarChart
       dataset={dataset}
+      width={width}
+      height={height}
       xAxis={[
         {
           scaleType: "band",

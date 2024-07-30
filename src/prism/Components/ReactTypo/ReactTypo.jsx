@@ -34,12 +34,7 @@ export default function ReactTypo({
         </Typography>
       )}
       {SubTitle && (
-        <Typography
-          variant="subtitle1"
-          color={lightText}
-          fontWeight={500}
-          sx={sx}
-        >
+        <Typography variant="subtitle2" fontWeight={600} sx={sx}>
           {SubTitle}
         </Typography>
       )}
