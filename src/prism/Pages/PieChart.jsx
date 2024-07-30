@@ -12,8 +12,8 @@ const data = [
 ];
 
 const size = {
-  width: 500,
-  height: 250,
+  width: 480,
+  height: 240,
 };
 
 const StyledText = styled("text")(({ theme }) => ({

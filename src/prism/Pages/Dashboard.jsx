@@ -3,25 +3,19 @@ import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
-import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Badge from "@mui/material/Badge";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import Link from "@mui/material/Link";
-import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
 import PieChartCircle from "./PieChart";
 
-import Orders from "./Orders";
 import {
   AppHeader,
   ReactButton,
@@ -29,25 +23,11 @@ import {
   ReactTypo,
   ReactPaper,
   ReactTable,
+  LatestClient,
+  ReactGaugeChart
 } from "../Components";
 import { miniCardData, lightText } from "../Utilites/Const";
 import ReactLink from "../Components/ReactButton/ReactLink";
-
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link href="https://mui.com/">Your Website</Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 const drawerWidth = 240;
 
@@ -198,29 +178,33 @@ export default function Dashboard() {
               </Grid>
               {/* Recent Deposits */}
 
-              <Grid item xs={12} md={8}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                  }}
+              <Grid item md={12} lg={6}>
+                <ReactPaper
+                  Title={"Top Inquiry"}
+                  children={<PieChartCircle />}
+                />
+              </Grid>
+              <Grid item md={12} lg={6}>
+                <ReactPaper Title={"Latest Client"} children={<LatestClient />} />
+              </Grid>
+              <Grid item md={12} lg={6}>
+                <ReactPaper
+                  Title={"Project Done Target"}
+                  
                 >
-                  <Typography variant="h6" align="left">
-                    <b>Top Inquiry</b>
-                  </Typography>
-                  <PieChartCircle />
-                </Paper>
+                <div style={{display: 'grid', justifyContent: 'center'}}>
+                <ReactGaugeChart />
+                <ReactTypo SubTitle2={'Great Job you and your team can finish over 75 project so far.'} />
+                </div>
+                </ReactPaper>
+
               </Grid>
-              {/* Recent Orders */}
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                  <Orders />
-                </Paper>
+              <Grid item md={12} lg={6}>
+                <ReactPaper Title={"Latest Client"} children={<LatestClient />} />
               </Grid>
+             
             </Grid>
-            <Copyright sx={{ pt: 4 }} />
+           
           </Container>
         </Box>
       </Box>

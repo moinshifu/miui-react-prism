@@ -91,7 +91,7 @@ export const dataset = [
 
 export const miniCardData = [
   {
-    score: "13,596",
+    score: "15,596",
     info: "Last Month Revenue",
     icon: <AttachMoneyIcon />,
     profit: +1.2,
@@ -148,5 +148,22 @@ export const projectData = [
     members: 3,
     tasks: 14,
     days: 8,
+  },
+];
+export const clientData = [
+  {
+    name: "Geo Vanni",
+    project: "Illustration Project",
+    status: "Wait Payment"
+  },
+  {
+    name: "Mas Indro",
+    project: "Icon Project",
+    status: "Done"
+  },
+  {
+    name: "Mas Fawa",
+    project: "UI Design Project",
+    status: "Wait Payment"
   },
 ];
