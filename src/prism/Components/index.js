@@ -8,6 +8,7 @@ import LatestClient from "./ReactTable/LatestClient";
 import ReactGaugeChart from "./ReactCharts/ReactGaugeChart";
 import LatestTransaction from "./ReactTable/LatestTransaction";
 import ReactBarChart from "./ReactCharts/ReactBarChart";
+import AppSidebar from "./AppSidebar/AppSidebar";
 
 export {
   AppHeader,
@@ -20,4 +21,5 @@ export {
   ReactGaugeChart,
   ReactBarChart,
   LatestTransaction,
+  AppSidebar,
 };

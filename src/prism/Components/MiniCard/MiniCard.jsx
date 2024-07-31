@@ -58,7 +58,11 @@ export default function MiniCard({
           </div>
           {(RightSubTitle || RightBodyText || RightSubTitle2 || PLText) && (
             <div style={{ textAlign: "right" }}>
-              <ReactTypo SubTitle={RightSubTitle} BodyText={RightBodyText} />
+              <ReactTypo
+                SubTitle={RightSubTitle}
+                BodyText={RightBodyText}
+                sx={{ whiteSpace: "nowrap" }}
+              />
               {PLText && (
                 <Tag>
                   {PLText}%

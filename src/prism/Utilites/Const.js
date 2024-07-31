@@ -189,6 +189,12 @@ export const transactionData = [
     amount: "+2,460.00",
     duration: "24 Apr 2020 - 10:52 PM",
   },
+  {
+    name: "Payout from Fawa",
+    project: "Icon Project",
+    amount: "-1050.00",
+    duration: "24 Apr 2020 - 10:52 PM",
+  },
 ];
 
 export const AccountingMiniCardData = [
