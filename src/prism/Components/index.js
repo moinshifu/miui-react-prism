@@ -4,7 +4,20 @@ import MiniCard from "./MiniCard/MiniCard";
 import ReactTypo from "./ReactTypo/ReactTypo";
 import ReactTable from "./ReactTable/ReactTable";
 import ReactPaper from "./ReactPaper/ReactPaper";
-import LatestClient from "./ReactTable/LatestClient"
-import ReactGaugeChart from "./ReactCharts/ReactGaugeChart"
+import LatestClient from "./ReactTable/LatestClient";
+import ReactGaugeChart from "./ReactCharts/ReactGaugeChart";
+import LatestTransaction from "./ReactTable/LatestTransaction";
+import ReactBarChart from "./ReactCharts/ReactBarChart";
 
-export { AppHeader, ReactButton, MiniCard, ReactTypo, ReactTable, ReactPaper, LatestClient, ReactGaugeChart };
+export {
+  AppHeader,
+  ReactButton,
+  MiniCard,
+  ReactTypo,
+  ReactTable,
+  ReactPaper,
+  LatestClient,
+  ReactGaugeChart,
+  ReactBarChart,
+  LatestTransaction,
+};

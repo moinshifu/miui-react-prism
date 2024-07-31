@@ -1,7 +1,10 @@
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import CheckIcon from "@mui/icons-material/Check";
-import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
-import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
+import {
+  Check,
+  TwoWheeler,
+  TimerOutlined,
+  Unarchive,
+} from "@mui/icons-material/";
 
 export const primaryText = "#202020";
 export const lightText = "#aaa8ae";
@@ -99,19 +102,19 @@ export const miniCardData = [
   {
     score: "+16",
     info: "Project Accepted",
-    icon: <CheckIcon />,
+    icon: <Check />,
     profit: -2.4,
   },
   {
     score: "92.8%",
     info: "Delivered On Time",
-    icon: <TwoWheelerIcon />,
+    icon: <TwoWheeler />,
     profit: +1.2,
   },
   {
     score: "1h 14m",
     info: "Responsed On Time",
-    icon: <TimerOutlinedIcon />,
+    icon: <TimerOutlined />,
     profit: -0.8,
   },
 ];
@@ -154,16 +157,78 @@ export const clientData = [
   {
     name: "Geo Vanni",
     project: "Illustration Project",
-    status: "Wait Payment"
+    status: "Wait Payment",
   },
   {
     name: "Mas Indro",
     project: "Icon Project",
-    status: "Done"
+    status: "Done",
   },
   {
     name: "Mas Fawa",
     project: "UI Design Project",
-    status: "Wait Payment"
+    status: "Wait Payment",
+  },
+];
+export const transactionData = [
+  {
+    name: "Transfer to Geo",
+    project: "Illustration Project",
+    amount: "-500.00",
+    duration: "24 Apr 2020 - 10:52 PM",
+  },
+  {
+    name: "Payout from Fawa",
+    project: "Icon Project",
+    amount: "-1050.00",
+    duration: "24 Apr 2020 - 10:52 PM",
+  },
+  {
+    name: "Mas Payout from Kukub",
+    project: "UI Design Project",
+    amount: "+2,460.00",
+    duration: "24 Apr 2020 - 10:52 PM",
+  },
+];
+
+export const AccountingMiniCardData = [
+  {
+    name: "Dribble Pro",
+    date: "17 April 2024",
+    price: "$99.00 ",
+    icon: <AttachMoneyIcon />,
+  },
+  {
+    name: "Photoshop CC",
+    date: "17 April 2024",
+    price: "$99.00 ",
+    icon: <Check />,
+  },
+  {
+    name: "Sketch Cloud",
+    date: "17 April 2024",
+    price: "$99.00 ",
+    icon: <TwoWheeler />,
+  },
+  {
+    name: "Figma Pro",
+    date: "17 April 2024",
+    price: "$99.00 ",
+    icon: <TimerOutlined />,
+  },
+];
+
+export const AccountingRevenueData = [
+  {
+    score: "25,000",
+    info: "Total Income",
+    icon: <Unarchive />,
+    profit: +2.5,
+  },
+  {
+    score: "17,525",
+    info: "Total Outcome",
+    icon: <Unarchive />,
+    profit: -1.2,
   },
 ];

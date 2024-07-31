@@ -9,11 +9,11 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: "1rem 1.5rem",
 }));
 
-export default function ReactPaper({ children, sx, Title, Action }) {
+export default function ReactPaper({ children, sx, Title, Action, SubTitle2 }) {
   return (
     <Item variant="outline" sx={sx}>
       <Grid container alignItems="center" justifyContent="space-between">
-        <ReactTypo Title={Title} />
+        <ReactTypo Title={Title} SubTitle2={SubTitle2} />
         {Action}
       </Grid>
       {children}

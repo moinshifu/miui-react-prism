@@ -7,14 +7,9 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
-import { AppBar, Typography, Badge } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import MenuIcon from "@mui/icons-material/Menu";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
-import Chart from "./Chart";
-import PieChartCircle from "./PieChart";
 
 import {
   AppHeader,
@@ -22,12 +17,15 @@ import {
   MiniCard,
   ReactTypo,
   ReactPaper,
-  ReactTable,
-  LatestClient,
   ReactGaugeChart,
+  LatestTransaction,
+  ReactBarChart,
 } from "../Components";
-import { miniCardData } from "../Utilites/Const";
-import ReactLink from "../Components/ReactButton/ReactLink";
+import {
+  AccountingMiniCardData,
+  AccountingRevenueData,
+} from "../Utilites/Const";
+import { Download, MoreHorizOutlined } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -60,7 +58,7 @@ const Drawer = styled(MuiDrawer, {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Dashboard() {
+export default function Accounting() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -69,42 +67,7 @@ export default function Dashboard() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: "flex" }}>
-        {/* <CssBaseline /> */}
-        <AppBar position="absolute" open={open}>
-          <Toolbar
-            sx={{
-              pr: "24px", // keep right padding when drawer closed
-            }}
-          >
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
-              sx={{
-                marginRight: "36px",
-                ...(open && { display: "none" }),
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              Dashboard
-            </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-        {/* <AppHeader open={open} /> */}
+        <AppHeader open={open} />
         <Drawer variant="permanent" open={open}>
           <Toolbar
             sx={{
@@ -142,56 +105,73 @@ export default function Dashboard() {
             <Grid container spacing={3}>
               <Grid item md={6}>
                 <ReactTypo
-                  MainHeading="Hi Moin"
-                  SubTitle2={"This is your Dashboard Overview."}
+                  MainHeading="Accounting"
+                  SubTitle2={
+                    "In below, you will see your accounting report so far."
+                  }
                 />
               </Grid>
               <Grid item md={6}>
                 <ReactButton text={"Download Report"} sx={{ float: "right" }} />
               </Grid>
 
-              {miniCardData.map((minicard) => {
+              <Grid item md={12} lg={9}>
+                <ReactPaper
+                  Title={"Revenue Overview"}
+                  SubTitle2={"Show revenue overview from Jan - May 2024"}
+                  Action={
+                    <ReactButton
+                      text="Download"
+                      outline
+                      startIcon={<Download />}
+                    />
+                  }
+                >
+                  <ReactBarChart />
+                </ReactPaper>
+              </Grid>
+              <Grid item md={12} lg={3}>
+                <Grid container spacing={3}>
+                  {AccountingRevenueData.map((minicard, index) => {
+                    console.log(minicard);
+                    return (
+                      <Grid
+                        item
+                        xs={12}
+                        sx={{ mb: index == minicard.length - 1 ? 3 : 0 }}
+                        key={index}
+                      >
+                        <MiniCard
+                          AvatarSize={60}
+                          block
+                          Heading={`$${minicard.score}`}
+                          SubTitle2={minicard.info}
+                          icon={minicard.icon}
+                          PLText={minicard.profit}
+                          Action={
+                            <MoreHorizOutlined sx={{ cursor: "pointer" }} />
+                          }
+                        />
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+              </Grid>
+              {AccountingMiniCardData.map((card) => {
                 return (
                   <Grid item xs={12} md={4} lg={3}>
                     <MiniCard
-                      sx={{ backgroundColor: "red" }}
-                      Heading={minicard.score}
-                      SubTitle2={minicard.info}
-                      icon={minicard.icon}
-                      PLText={minicard.profit}
+                      block
+                      Title={card.name}
+                      SubTitle2={card.date}
+                      icon={card.icon}
+                      RightBodyText={card.price}
+                      RightSubTitle2={"/ yearly"}
                     />
                   </Grid>
                 );
               })}
-
-              <Grid item md={12} lg={6}>
-                <ReactPaper Title={"Task Progress"}>
-                  <Chart />
-                </ReactPaper>
-              </Grid>
-              <Grid item md={12} lg={6}>
-                <ReactPaper
-                  Title={"Active Projects"}
-                  Action={<ReactLink text={"See All"} />}
-                >
-                  <ReactTable />
-                </ReactPaper>
-              </Grid>
-              {/* Recent Deposits */}
-
-              <Grid item md={12} lg={6}>
-                <ReactPaper
-                  Title={"Top Inquiry"}
-                  children={<PieChartCircle />}
-                />
-              </Grid>
-              <Grid item md={12} lg={6}>
-                <ReactPaper
-                  Title={"Latest Client"}
-                  children={<LatestClient />}
-                />
-              </Grid>
-              <Grid item md={12} lg={6}>
+              <Grid item md={12} lg={4}>
                 <ReactPaper Title={"Project Done Target"}>
                   <div style={{ display: "grid", justifyContent: "center" }}>
                     <ReactGaugeChart />
@@ -203,10 +183,10 @@ export default function Dashboard() {
                   </div>
                 </ReactPaper>
               </Grid>
-              <Grid item md={12} lg={6}>
+              <Grid item md={12} lg={8}>
                 <ReactPaper
-                  Title={"Latest Client"}
-                  children={<LatestClient />}
+                  Title={"Latest Transaction"}
+                  children={<LatestTransaction />}
                 />
               </Grid>
             </Grid>

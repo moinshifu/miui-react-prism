@@ -11,15 +11,27 @@ const PrimaryButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const ReactButton = ({ text, onClick, outline, sx, size }) => {
+const ReactButton = ({ text, onClick, outline, sx, size, startIcon }) => {
   return (
     <>
       {outline ? (
-        <Button onClick={onClick} variant="outlined" sx={sx} size={size}>
+        <Button
+          onClick={onClick}
+          variant="outlined"
+          sx={sx}
+          size={size}
+          startIcon={startIcon}
+        >
           {text}
         </Button>
       ) : (
-        <PrimaryButton onClick={onClick} variant="contained" sx={sx} size={size}>
+        <PrimaryButton
+          onClick={onClick}
+          variant="contained"
+          sx={sx}
+          size={size}
+          startIcon={startIcon}
+        >
           {text}
         </PrimaryButton>
       )}

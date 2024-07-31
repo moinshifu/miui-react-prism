@@ -8,7 +8,6 @@ export default function ReactTypo({
   SubTitle,
   SubTitle2,
   BodyText,
-  children,
   sx,
 }) {
   return (
@@ -16,21 +15,18 @@ export default function ReactTypo({
       {MainHeading && (
         <Typography variant="h4" fontWeight={700} sx={sx}>
           {MainHeading}
-          {children}
         </Typography>
       )}
 
       {Heading && (
         <Typography variant="h5" fontWeight={700} sx={sx}>
           {Heading}
-          {children}
         </Typography>
       )}
 
       {Title && (
         <Typography variant="h6" fontWeight={700} sx={sx}>
           {Title}
-          {children}
         </Typography>
       )}
       {SubTitle && (

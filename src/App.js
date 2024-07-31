@@ -1,10 +1,10 @@
 import "./App.css";
-import Button from "@mui/material/Button";
-import Dashboard from "./prism/Pages/Dashboard";
+import { Accounting, Dashboard } from "./prism/Pages";
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <Accounting />
+      {/* <Dashboard /> */}
     </div>
   );
 }
