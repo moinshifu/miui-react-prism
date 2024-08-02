@@ -1,10 +1,10 @@
-import "./App.css";
-import { Accounting, Dashboard } from "./prism/Pages";
+import { Accounting, Dashboard, TeamExpense } from "./prism/Pages";
 function App() {
   return (
     <div className="App">
-      <Accounting />
+      {/* <Accounting /> */}
       {/* <Dashboard /> */}
+      <TeamExpense />
     </div>
   );
 }

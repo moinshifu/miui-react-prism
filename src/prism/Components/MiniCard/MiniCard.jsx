@@ -1,6 +1,6 @@
 import { Avatar, Stack, Typography, styled } from "@mui/material";
 import { TrendingUpOutlined, TrendingDownOutlined } from "@mui/icons-material";
-import { primary, success, alert } from "../../Utilites/Const";
+import { primary, success, alert, primaryLight } from "../../Utilites/Const";
 import ReactTypo from "../ReactTypo/ReactTypo";
 import ReactPaper from "../ReactPaper/ReactPaper";
 export default function MiniCard({
@@ -30,11 +30,15 @@ export default function MiniCard({
         direction={block ? "column" : "row"}
         alignItems={block ? "flex-start" : "center"}
       >
-        <Stack spacing={2} direction={"row"} sx={{ width: "100%" }}>
+        <Stack
+          spacing={2}
+          direction={"row"}
+          sx={{ width: Action ? "100%" : "auto" }}
+        >
           <div style={{ flex: "1", width: "100%" }}>
             <Avatar
               sx={{
-                bgcolor: "#edf4fe",
+                bgcolor: primaryLight,
                 color: primary,
                 width: AvatarSize,
                 height: AvatarSize,
@@ -48,13 +52,8 @@ export default function MiniCard({
 
         <Stack spacing={2} direction={"row"} sx={{ width: "100%" }}>
           <div style={{ flex: "1", width: "100%" }}>
-            <ReactTypo
-              Heading={Heading}
-              Title={Title}
-              // children={<Tag>{profit}%</Tag>}
-              sx={{ position: "relative", paddingRight: "28px" }}
-            />
-            <ReactTypo SubTitle2={SubTitle2} />
+            <ReactTypo Heading={Heading} Title={Title} />
+            <ReactTypo SubTitle2={SubTitle2} sx={{ whiteSpace: "nowrap" }} />
           </div>
           {(RightSubTitle || RightBodyText || RightSubTitle2 || PLText) && (
             <div style={{ textAlign: "right" }}>

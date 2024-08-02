@@ -9,6 +9,7 @@ import {
 export const primaryText = "#202020";
 export const lightText = "#aaa8ae";
 export const primary = "#1f7bf4";
+export const primaryLight = "#edf4fe";
 export const primary2 = "#00aaff";
 export const success = "#0aa630";
 export const orange = "#ffa043";
@@ -236,5 +237,26 @@ export const AccountingRevenueData = [
     info: "Total Outcome",
     icon: <Unarchive />,
     profit: -1.2,
+  },
+];
+
+export const TeamExpenseSSData = [
+  {
+    name: "Stetch App",
+    info: "10 May 2024",
+    icon: <Unarchive />,
+    amount: "$99,00",
+  },
+  {
+    name: "Photoshop CC",
+    info: "14 May 2024",
+    icon: <Unarchive />,
+    amount: "$300,00",
+  },
+  {
+    name: "Dribble Pro",
+    info: "10 May 2024",
+    icon: <Unarchive />,
+    amount: "$75,00",
   },
 ];
