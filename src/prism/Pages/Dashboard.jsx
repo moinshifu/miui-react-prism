@@ -42,7 +42,7 @@ export default function Dashboard() {
         >
           <Toolbar />
           <Container maxWidth="xl" sx={{ my: 4 }}>
-            <Grid container spacing={3}>
+            <Grid container spacing={2}>
               <Grid item md={6}>
                 <ReactTypo
                   MainHeading="Konarq - KPI Cards"
@@ -103,15 +103,35 @@ export default function Dashboard() {
                   <Chart />
                 </ReactPaper>
               </Grid>
-             
               <Grid item md={12} lg={6}>
+                <ReactPaper Title={"Total Revenue"}>
+                  <Chart />
+                </ReactPaper>
+              </Grid>
+              <Grid item md={12} lg={3}>
+                <ReactPaper Title={"Total Revenue"}>
+                  <Chart />
+                </ReactPaper>
+              </Grid>
+              <Grid item md={12} lg={3}>
+                <ReactPaper Title={"Revenue Breakup"}>
+                  <Chart />
+                </ReactPaper>
+              </Grid>
+              {/* <Grid item md={12} lg={3}>
+                <ReactPaper Title={"Tax Collected"}>
+                  <Chart />
+                </ReactPaper>
+              </Grid> */}
+             
+              {/* <Grid item md={12} lg={6}>
                 <ReactPaper
                   Title={"Active Projects"}
                   Action={<ReactLink text={"See All"} />}
                 >
                   <ReactTable />
                 </ReactPaper>
-              </Grid>
+              </Grid> */}
               {/* Recent Deposits */}
 
               <Grid item md={12} lg={6}>

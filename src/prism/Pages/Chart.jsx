@@ -127,7 +127,7 @@ export default function BarsDataset({ width, height = 220 }) {
         {
           scaleType: "band",
           dataKey: "month",
-          categoryGapRatio: 0.6,
+          categoryGapRatio: 0.8,
           barGapRatio: 0.4,
         },
       ]}
