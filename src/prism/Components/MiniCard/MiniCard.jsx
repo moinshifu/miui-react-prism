@@ -21,7 +21,7 @@ export default function MiniCard({
     fontWeight: 700,
     fontSize: "15px",
     display: "flex",
-    alignItems: "center",
+    minHeight: '30px'
   }));
   return (
     <ReactPaper>
@@ -32,6 +32,7 @@ export default function MiniCard({
       >
         <Stack
           spacing={2}
+
           direction={"row"}
           sx={{ width: Action ? "100%" : "auto" }}
         >
@@ -65,7 +66,7 @@ export default function MiniCard({
               {PLText && (
                 <Tag>
                   {PLText}%
-                  {PLText >= 0 ? (
+                  {PLText > 0 ? (
                     <TrendingUpOutlined />
                   ) : (
                     <TrendingDownOutlined />

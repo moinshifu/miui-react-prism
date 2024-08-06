@@ -46,7 +46,7 @@ export default function Dashboard() {
               <Grid item md={6}>
                 <ReactTypo
                   MainHeading="Konarq - KPI Cards"
-                  // SubTitle2={"This is your Dashboard Overview."}
+                  // SubTitle2={"This is your Dashboard Overview."} 
                 />
               </Grid>
               <Grid item md={6}>
@@ -69,41 +69,28 @@ export default function Dashboard() {
               {KapativeCards.map((minicard) => {
                 return (
                   <Grid item xs={12} lg={6} xl={3}>
-                    <MiniCard
-                      AvatarSize={60}
-                      block
-                      Heading={`$${minicard.score}`}
-                      SubTitle2={minicard.info}
-                      icon={minicard.icon}
-                      PLText={minicard.profit}
-                      RightSubTitle2={"22 - 23"}
-                      Action={<MoreHorizOutlined sx={{ cursor: "pointer" }} />}
-                    />
-                  </Grid>
-                );
-              })}
 
-              <Grid item md={12} lg={3}>
-                <ReactPaper Title={"Total Revenue"}>
+<MiniCard
+                          AvatarSize={60}
+                          block
+                          Heading={`$${minicard.score}`}
+                          SubTitle2={minicard.info}
+                          icon={minicard.icon}
+                          PLText={minicard.profit}
+                          RightSubTitle2={'22 - 23'}
+                          Action={
+                            <MoreHorizOutlined sx={{ cursor: "pointer" }} />
+                          }
+                          />
+                          </Grid>
+                        );
+                      })}
+
+              <Grid item md={12} lg={6}>
+                <ReactPaper Title={"Task Progress"}>
                   <Chart />
                 </ReactPaper>
               </Grid>
-              <Grid item md={12} lg={3}>
-                <ReactPaper Title={"Total Revenue"}>
-                  <Chart />
-                </ReactPaper>
-              </Grid>
-              <Grid item md={12} lg={3}>
-                <ReactPaper Title={"Revenue Breakup"}>
-                  <Chart />
-                </ReactPaper>
-              </Grid>
-              <Grid item md={12} lg={3}>
-                <ReactPaper Title={"Tax Collected"}>
-                  <Chart />
-                </ReactPaper>
-              </Grid>
-             
               <Grid item md={12} lg={6}>
                 <ReactPaper
                   Title={"Active Projects"}

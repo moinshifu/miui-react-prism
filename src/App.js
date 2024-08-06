@@ -3,8 +3,8 @@ function App() {
   return (
     <div className="App">
       {/* <Accounting /> */}
-      {/* <Dashboard /> */}
-      <TeamExpense />
+      <Dashboard />
+      {/* <TeamExpense /> */}
     </div>
   );
 }

@@ -18,80 +18,126 @@ export const cardShadow =
   "rgba(17, 17, 26, 0.05) 0px 1px 1px,rgba(17, 17, 26, 0.1) 0px 0px 2px";
 
 export const drawerWidth = 240;
+// export const dataset = [
+//   {
+//     london: 59,
+//     paris: 57,
+//     newYork: 86,
+//     month: "Jan",
+//   },
+//   {
+//     london: 50,
+//     paris: 52,
+//     newYork: 78,
+//     month: "Feb",
+//   },
+//   {
+//     london: 47,
+//     paris: 53,
+//     newYork: 106,
+//     month: "Mar",
+//   },
+//   {
+//     london: 54,
+//     paris: 56,
+//     newYork: 92,
+//     month: "Apr",
+//   },
+//   {
+//     london: 57,
+//     paris: 69,
+//     newYork: 92,
+//     month: "May",
+//   },
+//   {
+//     london: 60,
+//     paris: 63,
+//     newYork: 103,
+//     month: "June",
+//   },
+//   {
+//     london: 59,
+//     paris: 60,
+//     newYork: 105,
+//     month: "July",
+//   },
+//   {
+//     london: 65,
+//     paris: 60,
+//     newYork: 106,
+//     month: "Aug",
+//   },
+//   {
+//     london: 51,
+//     paris: 51,
+//     newYork: 95,
+//     month: "Sept",
+//   },
+//   {
+//     london: 60,
+//     paris: 65,
+//     newYork: 97,
+//     month: "Oct",
+//   },
+//   {
+//     london: 67,
+//     paris: 64,
+//     newYork: 76,
+//     month: "Nov",
+//   },
+//   {
+//     london: 61,
+//     paris: 70,
+//     newYork: 103,
+//     month: "Dec",
+//   },
+// ];
+
 export const dataset = [
   {
-    london: 59,
-    paris: 57,
+    // london: 59,
+    // paris: 57,
     newYork: 86,
     month: "Jan",
   },
   {
-    london: 50,
-    paris: 52,
+    // london: 50,
+    // paris: 52,
     newYork: 78,
     month: "Feb",
   },
   {
-    london: 47,
-    paris: 53,
+    // london: 47,
+    // paris: 53,
     newYork: 106,
     month: "Mar",
   },
-  {
-    london: 54,
-    paris: 56,
-    newYork: 92,
-    month: "Apr",
-  },
-  {
-    london: 57,
-    paris: 69,
-    newYork: 92,
-    month: "May",
-  },
-  {
-    london: 60,
-    paris: 63,
-    newYork: 103,
-    month: "June",
-  },
-  {
-    london: 59,
-    paris: 60,
-    newYork: 105,
-    month: "July",
-  },
-  {
-    london: 65,
-    paris: 60,
-    newYork: 106,
-    month: "Aug",
-  },
-  {
-    london: 51,
-    paris: 51,
-    newYork: 95,
-    month: "Sept",
-  },
-  {
-    london: 60,
-    paris: 65,
-    newYork: 97,
-    month: "Oct",
-  },
-  {
-    london: 67,
-    paris: 64,
-    newYork: 76,
-    month: "Nov",
-  },
-  {
-    london: 61,
-    paris: 70,
-    newYork: 103,
-    month: "Dec",
-  },
+ 
+  
+  
 ];
+// export const dataset = [
+//   {
+//     // london: 59,
+//     // paris: 57,
+//     newYork: 120,
+//     month: "2022",
+//   },
+//   {
+//     // london: 50,
+//     // paris: 52,
+//     newYork: 55,
+//     month: "2023",
+//   },
+//   {
+//     // london: 47,
+//     // paris: 53,
+//     newYork: 166,
+//     month: "2024",
+//   },
+
+  
+// ];
 
 export const miniCardData = [
   {
@@ -258,5 +304,32 @@ export const TeamExpenseSSData = [
     info: "10 May 2024",
     icon: <Unarchive />,
     amount: "$75,00",
+  },
+];
+
+export const KapativeCards = [
+  {
+    score: "0.0",
+    info: "Net Income",
+    icon: <AttachMoneyIcon />,
+    profit: 1,
+  },
+  {
+    score: "224.6 K",
+    info: "Income",
+    icon: <AttachMoneyIcon />,
+    profit: +8.43,
+  },
+  {
+    score: "75.2 K",
+    info: "MRR",
+    icon: <AttachMoneyIcon />,
+    profit: - 8.14,
+  },
+  {
+    score: "741.9 K",
+    info: "Gross Profit",
+    icon: <AttachMoneyIcon />,
+    profit: + 30.26,
   },
 ];
