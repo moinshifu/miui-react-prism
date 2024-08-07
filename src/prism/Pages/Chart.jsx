@@ -48,7 +48,6 @@
 //   );
 // }
 
-
 // import * as React from "react";
 // import { BarChart } from "@mui/x-charts/BarChart";
 // import { axisClasses } from "@mui/x-charts/ChartsAxis";
@@ -99,8 +98,6 @@
 //   );
 // }
 
-
-
 import * as React from "react";
 import { BarChart } from "@mui/x-charts/BarChart";
 import { axisClasses } from "@mui/x-charts/ChartsAxis";
@@ -117,7 +114,7 @@ const chartSetting = {
 
 const valueFormatter = (value) => `${value}mm`;
 
-export default function BarsDataset({ width, height = 220 }) {
+export default function BarsDataset({ width, height = 160 }) {
   return (
     <BarChart
       dataset={dataset}

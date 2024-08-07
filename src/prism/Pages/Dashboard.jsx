@@ -94,6 +94,16 @@ export default function Dashboard() {
                 </ReactPaper>
               </Grid>
               <Grid item md={12} lg={3}>
+                <ReactPaper Title={"Total Revenue"}>
+                  <Chart />
+                </ReactPaper>
+              </Grid>
+              <Grid item md={12} lg={3}>
+                <ReactPaper Title={"Revenue Breakup"}>
+                  <Chart />
+                </ReactPaper>
+              </Grid>
+              <Grid item md={12} lg={3}>
                 <ReactPaper Title={"Revenue Breakup"}>
                   <Chart />
                 </ReactPaper>
@@ -123,7 +133,7 @@ export default function Dashboard() {
                   <Chart />
                 </ReactPaper>
               </Grid> */}
-             
+
               {/* <Grid item md={12} lg={6}>
                 <ReactPaper
                   Title={"Active Projects"}

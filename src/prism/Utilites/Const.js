@@ -112,9 +112,6 @@ export const dataset = [
     newYork: 106,
     month: "Mar",
   },
- 
-  
-  
 ];
 // export const dataset = [
 //   {
@@ -136,7 +133,6 @@ export const dataset = [
 //     month: "2024",
 //   },
 
-  
 // ];
 
 export const miniCardData = [
@@ -324,12 +320,18 @@ export const KapativeCards = [
     score: "75.2 K",
     info: "MRR",
     icon: <AttachMoneyIcon />,
-    profit: - 8.14,
+    profit: -8.14,
   },
   {
     score: "741.9 K",
     info: "Gross Profit",
     icon: <AttachMoneyIcon />,
-    profit: + 30.26,
+    profit: +30.26,
+  },
+  {
+    score: "741.9 K",
+    info: "Gross Profit",
+    icon: <AttachMoneyIcon />,
+    profit: +30.26,
   },
 ];
