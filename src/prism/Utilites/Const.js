@@ -12,8 +12,10 @@ export const primary = "#1f7bf4";
 export const primaryLight = "#edf4fe";
 export const primary2 = "#00aaff";
 export const success = "#0aa630";
+export const successlight = "#e6f6ea";
 export const orange = "#ffa043";
 export const alert = "#fc0000";
+export const alertlight = "#ffe8e8";
 export const cardShadow =
   "rgba(17, 17, 26, 0.05) 0px 1px 1px,rgba(17, 17, 26, 0.1) 0px 0px 2px";
 

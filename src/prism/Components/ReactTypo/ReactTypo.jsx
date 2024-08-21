@@ -8,12 +8,14 @@ export default function ReactTypo({
   SubTitle,
   SubTitle2,
   BodyText,
+  MainHeadingSx,
+  TitleSx,
   sx,
 }) {
   return (
     <Box>
       {MainHeading && (
-        <Typography variant="h4" fontWeight={700} sx={sx}>
+        <Typography variant="h4" fontWeight={700} sx={MainHeadingSx}>
           {MainHeading}
         </Typography>
       )}
@@ -25,7 +27,7 @@ export default function ReactTypo({
       )}
 
       {Title && (
-        <Typography variant="h6" fontWeight={700} sx={sx}>
+        <Typography variant="h6" fontWeight={700} sx={TitleSx}>
           {Title}
         </Typography>
       )}

@@ -1,6 +1,7 @@
 import AppHeader from "./AppHeader/AppHeader";
 import ReactButton from "./ReactButton/ReactButton";
 import MiniCard from "./MiniCard/MiniCard";
+import KPICARD from "./MiniCard/KPICARD";
 import ReactTypo from "./ReactTypo/ReactTypo";
 import ReactTable from "./ReactTable/ReactTable";
 import ReactPaper from "./ReactPaper/ReactPaper";
@@ -16,6 +17,7 @@ export {
   AppHeader,
   ReactButton,
   MiniCard,
+  KPICARD,
   ReactTypo,
   ReactTable,
   ReactPaper,

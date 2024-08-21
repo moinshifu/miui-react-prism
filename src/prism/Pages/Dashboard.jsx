@@ -11,7 +11,7 @@ import PieChartCircle from "./PieChart";
 import {
   AppHeader,
   ReactButton,
-  MiniCard,
+  KPICARD,
   ReactTypo,
   ReactPaper,
   ReactTable,
@@ -69,11 +69,11 @@ export default function Dashboard() {
               {KapativeCards.map((minicard) => {
                 return (
                   <Grid item xs={12} lg={6} xl={3}>
-                    <MiniCard
+                    <KPICARD
+                      Name={minicard.info}
                       AvatarSize={60}
                       block
-                      Heading={`$${minicard.score}`}
-                      SubTitle2={minicard.info}
+                      Title={`$${minicard.score}`}
                       icon={minicard.icon}
                       PLText={minicard.profit}
                       RightSubTitle2={"22 - 23"}
